@@ -1,0 +1,22 @@
+person:
+  name: Sam
+  age: 48
+  birth-day: 2010/10/12 12:12:12
+  like: true
+  child:
+    name: Samson
+    age: 18
+    birth-day: 2018/10/10
+    text:
+      - abc
+      - def
+  pigs:
+    - name: xiaohei
+      age: 3
+    - name: xiaobai
+      age: 2
+  cats:
+    c1:
+      name: xiaolan
+      age: 3
+    c2: {name: xiaolu, age: 2}

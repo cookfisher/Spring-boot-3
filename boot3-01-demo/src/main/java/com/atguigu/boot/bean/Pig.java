@@ -1,10 +1,12 @@
 package com.atguigu.boot.bean;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 //@ConfigurationProperties(prefix = "pig")
 //@Component
+@Data
 public class Pig {
     private Long id;
     private String name;
