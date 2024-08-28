@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello: <span th:text="${msg}"></span></h1>
+
+<hr/>
+th:text
+<h1 th:text="${msg}">haha</h1>
+th:utext
+<h1 th:utext="${msg}">hehe</h1>
+<hr/>
+<h1 th:text="${#strings.toUpperCase(name)}"></h1>
+
+<hr/>
+<img src="1.jpg" style="width: 300px;" th:attr="src=@{${imgUrl}},style=${style}"/>
+<br/>
+<img th:src="@{${imgUrl}}" th:style="${style}" th:if="${show}"/>
+
+</body>
+</html>
