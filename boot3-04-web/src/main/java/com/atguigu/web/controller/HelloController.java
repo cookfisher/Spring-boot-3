@@ -1,6 +1,6 @@
 package com.atguigu.web.controller;
 
-import com.atguigu.web.Bean.Person;
+import com.atguigu.web.bean.Person;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;

@@ -1,12 +1,8 @@
-package com.atguigu.web.Bean;
+package com.atguigu.web.bean;
 
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 //@Component
 //@ConfigurationProperties(prefix = "person")
