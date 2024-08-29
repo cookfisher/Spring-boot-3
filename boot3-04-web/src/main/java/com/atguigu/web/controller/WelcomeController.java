@@ -17,6 +17,7 @@ public class WelcomeController {
         model.addAttribute("imgUrl", "/static/2.jpg");
         model.addAttribute("style", "width: 400px");
         model.addAttribute("show", true);
+
         return "welcome";
     }
 }
