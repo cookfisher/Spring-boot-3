@@ -12,31 +12,31 @@ import java.util.UUID;
 class Boo309RedisApplicationTests {
 
 	@Autowired
-	StringRedisTemplate redisTemplate;
+	StringRedisTemplate stringRedisTemplate;
 
 	@Test
 	void contextLoads() {
-		redisTemplate.opsForValue().set("haha", UUID.randomUUID().toString());
-		var haha = redisTemplate.opsForValue().get("haha");
+		stringRedisTemplate.opsForValue().set("haha", UUID.randomUUID().toString());
+		var haha = stringRedisTemplate.opsForValue().get("haha");
 		System.out.println(haha);
 	}
 
 	@Test
 	void testList() {
 		String alist = "alist";
-		redisTemplate.opsForList().leftPush(alist, "1");
-		redisTemplate.opsForList().leftPush(alist, "2");
-		redisTemplate.opsForList().leftPush(alist, "3");
+		stringRedisTemplate.opsForList().leftPush(alist, "1");
+		stringRedisTemplate.opsForList().leftPush(alist, "2");
+		stringRedisTemplate.opsForList().leftPush(alist, "3");
 
-		String pop = redisTemplate.opsForList().leftPop(alist);
+		String pop = stringRedisTemplate.opsForList().leftPop(alist);
 		Assertions.assertEquals("3", pop);
 	}
 
 	@Test
 	void testSet() {
 		String aset = "aset";
-		redisTemplate.opsForSet().add(aset, "1", "2", "2", "3");
-		Boolean aBoolean = redisTemplate.opsForSet().isMember(aset, "1");
+		stringRedisTemplate.opsForSet().add(aset, "1", "2", "2", "3");
+		Boolean aBoolean = stringRedisTemplate.opsForSet().isMember(aset, "1");
         Assertions.assertEquals(Boolean.TRUE, aBoolean);
 	}
 
